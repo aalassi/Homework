@@ -141,43 +141,33 @@ class="w3-display-container w3-grayscale-min">
 <section class=res-area>
 
     <div class="wrapres">
-        <form class="my-reservation-form">
+        <form mehtod="post" action="https://striveschool-api.herokuapp.com/api/reservation/" class="my-reservation-form" id="my-reservation-form">
                 <h4 class="sub-title">Reservation</h4>
                 <h2 class="title white-text">Book Your Table</h2>
 
                     <label for="name">Name:</label>
-                    <input class="input" type="text" placeholder="Name" id="name">
+                    <input class="input" type="text" placeholder="Name" id="name" required="true">
 
                     <label for="phone">Phone:</label>
-                    <input class="input" type="tel" placeholder="Phone" id="phone">
+                    <input class="input" type="tel" placeholder="Phone" id="phone" required="true">
 
-                    <label for="number">Number of Guests:</label>
-                    <select class="input" id="number">
-                        <option>1 Person</option>
-                        <option>2 People</option>
-                        <option>3 People</option>
-                        <option>4 People</option>
-                        <option>5 People</option>
-                        <option>6 People</option>
-                    </select>
+                    <label for="numberOfPersons">Number of Guests:</label>
+                   <input class="input" type="number" id="numberOfPersons">
 <br>
-                    <label for="guestsmoker">Smoking?</label>
-                    <input type="radio" name="guestsmoker" value="true">yes</input>
-                    <input type="radio" name="guestsmoker" value="false">no</input>
+                    <label for="smoking">Smoking?</label>
+                    <input type="radio" name="smoking" id="smoking" value="true" >yes</input >
+                    <input type="radio" name="smoking" id="smoking" value="false" >no</input>
 
 <br>
 
-                    <label for="date">Date:</label>
-                    <input class="input" type="text" placeholder="MM/DD/YYYY" id="date">
+                    <label for="dateTime">Date and Time</label>
+                    <input class="input" type="date" placeholder="MM/DD/YYYY" id="date" required="true" id="dateTime">
+                    <input class="input" type="time" placeholder="HH:MM" id="time" required="true" id="dateTime">
 
+                  <label for="specialRequests">special requests</label>
+                  <input class="input" type="text" placeholder="enter your special requests" id="specialRequests">
 
-                    <label for="time">Time:</label>
-                  <input class="input" type="text" placeholder="HH:MM" id="time">
-
-                  <label for="specialReq">special requests</label>
-                  <input class="input" type="text" placeholder="specialReq" id="specialReq">
-
-                <button class="main-button">Book Now</button>
+                <button type="submit" class="main-button">Book Now</button>
 
         </form>
     </div>
@@ -220,3 +210,7 @@ class="w3-display-container w3-grayscale-min">
 <script src="restaurantform.js"></script>
 </body>
 </html>
+
+
+
+<!--dumped mehtod="post" action="https://striveschool-api.herokuapp.com/api/reservation/" class="my-reservation-form"-->
