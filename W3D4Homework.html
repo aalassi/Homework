@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<title>Ahmad's Restaurant</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    .w3-content {
+     max-width: 99%; 
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  .res-area {
+      background-color: black;
+      color: #fff;
+      padding: 100px 0px;
+      
+  }
+  .aboutme {
+      background-color: black;
+      color: #fff;
+      
+  }
+  .footer {
+      text-align: center;
+  }
+  .social {
+      text-align: center;
+      display: grid;
+      
+  }
+  .social a {
+      font-size: 50px;
+  }
+
+  .wrapres {
+    font-size: 35px;
+    text-align: center;
+    
+  }
+  .my-reservation-form {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    max-width: 400px;
+  }
+  @media screen and (max-width: 768px){ 
+    .my-reservation-form 
+  {
+    max-width: 300px;
+  }  
+  }
+</style>
+<body>
+<!-- Start Content -->
+<div id="home" class="w3-content">
+
+<!-- Navbar (Sits on top) -->
+<div class="w3-top w3-bar w3-xlarge w3-black w3-opacity-min">
+<a href="#home" class="w3-bar-item w3-button">HOME</a>
+<a href="#menu" class="w3-bar-item w3-button">MENU</a>
+<a href="#reservation-form" class="w3-bar-item w3-button">Reservation Form</a>
+<a href="#aboutme" class="w3-bar-item w3-button">About me</a>
+
+</div>
+  
+<!-- Header image -->
+<div style="height:800px;background-image:url('/Restaurant/background2.jpg');background-size:cover"
+class="w3-display-container w3-grayscale-min">
+<div class="w3-display-bottomleft">
+  <span class="w3-tag w3-xlarge">Open from 10am to 12pm</span>
+</div>
+<div class="w3-display-middle w3-center">
+  <span class="w3-text-white" style="font-size:100px">Ahmad's<br>Restaurant</span>
+  <p><a href="#reservation-form" class="w3-button w3-xxlarge w3-black">Let me make a reservation</a></p>
+
+
+
+</div>
+</div>
+
+  <!-- slide photos starts here -->
+  <a name=menu></a>
+  <h1>Menu</h1>
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/Restaurant/schawarma.jpg" alt="plate of chicken schawarma sandwish" width="1100" height="500">
+        <div class="carousel-caption">
+          <h3>schawarma</h3>
+          <p>schicked schawarma</p>
+        </div>   
+      </div>
+      <div class="carousel-item">
+        <img src="/Restaurant/mujaddra.jpg" alt="plate of mujaddra meal" width="1100" height="500">
+        <div class="carousel-caption">
+          <h3>Mujaddra</h3>
+          <p>rice, lentlis,minced beef served with jogurt garlic sauce</p>
+        </div>   
+      </div>
+      <div class="carousel-item">
+        <img src="/Restaurant/molokhie.jpg" alt="plate of molokhie meal" width="1100" height="500">
+        <div class="carousel-caption">
+          <h3>Molokhiye</h3>
+          <p>rice with molokhiye</p>
+        </div>   
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+<!-- slide photos ends here -->
+
+
+<!--reservation starts here -->
+<a name=reservation-form></a> <h1>Reservation Form</h1>
+<section class=res-area>
+
+    <div class="wrapres">
+        <form class="my-reservation-form">
+                <h4 class="sub-title">Reservation</h4>
+                <h2 class="title white-text">Book Your Table</h2>
+
+                    <label for="name">Name:</label>
+                    <input class="input" type="text" placeholder="Name" id="name">
+
+                    <label for="phone">Phone:</label>
+                    <input class="input" type="tel" placeholder="Phone" id="phone">
+
+                    <label for="number">Number of Guests:</label>
+                    <select class="input" id="number">
+                        <option>1 Person</option>
+                        <option>2 People</option>
+                        <option>3 People</option>
+                        <option>4 People</option>
+                        <option>5 People</option>
+                        <option>6 People</option>
+                    </select>
+<br>
+                    <label for="guestsmoker">Smoking?</label>
+                    <input type="radio" name="guestsmoker" value="true">yes</input>
+                    <input type="radio" name="guestsmoker" value="false">no</input>
+
+<br>
+
+                    <label for="date">Date:</label>
+                    <input class="input" type="text" placeholder="MM/DD/YYYY" id="date">
+
+
+                    <label for="time">Time:</label>
+                  <input class="input" type="text" placeholder="HH:MM" id="time">
+
+                  <label for="specialReq">special requests</label>
+                  <input class="input" type="text" placeholder="specialReq" id="specialReq">
+
+                <button class="main-button">Book Now</button>
+
+        </form>
+    </div>
+    <!-- /reservation form -->
+
+
+
+</section>
+
+<!--reservation ends here-->
+
+
+<!-- about me -->
+<a name=aboutme></a> <h1>About me</h1>
+<section class=aboutme>
+
+    <div class="social">
+     
+<h1>hi :-)<br>
+    <img src="/Ahmad.jpg" width="200px"><br> my name is ahmad khalil al assi. I'm a student at strive school, learning @strive cool things how to be a web developer</h1>
+        <h2>note: this restaurant does not exist, it's just my homework for week 3 day 4  </h2>
+        <h3>feel free to check out my social media</h3>
+        <a href="https://www.instagram.com/assiphotography/" target="_blank" class="fa fa-instagram"></a>
+        <br>
+        <a href="http://www.facebook.com/assiphoto" target="_blank" class="fa fa-facebook"></a>
+        <br>
+        <a href="http://www.twitter.com/assiphoto" target="_blank" class="fa fa-twitter"></a>
+        <h3>here is also the link to my  <a href="https://aalassi.github.io/Homework" target="_blank">github </a>page</h3>
+      
+    </div>
+
+</section>
+<!-- about me ends here-->
+
+<h3 class="footer">&copy; Ahmad khalil Al Assi. All rights reserved. </h3>
+<!-- End Content -->
+</div>
+
+<!--script begins-->
+<script src="restaurantform.js"></script>
+</body>
+</html>

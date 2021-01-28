@@ -1,0 +1,623 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, hsl(177deg 26% 45% / 37%), white);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+}
+
+nav { 
+    background: #fff;
+}
+
+.main {
+    min-height: 100vh;
+}
+
+.nav-logo h5 {
+    color: #459c98;
+}
+
+.social {
+    background-color: #459c98;
+    display: inline-block;
+    height: fit-content;
+    width: fit-content;
+}
+
+.headnav {
+    display: flex;
+    background-color: #fff;
+    justify-content: space-between;
+   
+}
+
+.back-nav-menu {
+    margin-top: -22px;
+    background-color: #459c98;
+    color: #fff;
+  
+  
+   
+}
+
+.nav-logo h2 {
+    color:#459c98;
+font-weight: 100;}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav .back-nav-menu ul.nav-menu li {
+    display: inline-block;
+    margin-right: 3rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+nav ul.nav-logo {
+   list-style: none;
+   display: inline-block;
+   
+   
+
+   vertical-align: middle;
+}
+
+nav ul {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+nav .nav-menu li.active {
+    font-weight: bold;
+}
+
+
+.container {
+    display: flex;
+    flex-flow: column;
+    border: 3px solid  #459c98;
+    justify-content: space-around;
+    margin: 40px 20px;
+      padding: 20px;
+}
+
+.professional {
+    padding: 5px;
+   
+    color: #459c98;
+}
+
+.contacttext p {
+    color: #fff;
+}
+
+.professional table {
+    width: 100%;
+}
+
+
+.academicbox {
+
+    display: flex;
+    flex-flow: column;
+    border: 3px solid  #459c98;
+    background-color:#459c98;
+    justify-content: space-around;
+    margin: 40px 20px;
+      padding: 20px;
+    
+
+}
+
+.academic-experience {
+  
+    padding: 5px;
+    background-color:#459c98;
+    color: #fff;
+
+}
+
+.academic-experience table {
+    width: 100%;
+}
+
+
+
+
+
+
+
+/* Style all font awesome icons */
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.7;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background:  #459c98;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background:  #459c98;
+    color: white;
+  }
+
+   /* instagram */
+   .fa-instagram {
+    background:  #459c98;
+    color: white;
+  }
+
+
+
+  .aboutbox {
+      display: flex;
+     flex-flow: column;
+      
+     
+      background-color: #459c98;
+      
+      margin: 40px 20px;
+      padding: 20px;
+      
+  }
+
+  .box-title1 {
+      text-align: right;
+
+    font: 100 33px/1.2  'Brush Script MT', cursive;
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 3px 3px rgb(102, 101, 101);
+
+padding-top: 10px;
+margin-top: -16px;
+    background: rgb(69,156,152);
+    background: linear-gradient(0deg, rgba(69,156,152,1) 0%, rgba(89,222,216,1) 100%) ;
+    
+   
+}
+
+.textabouot {
+  
+align-self: center;
+   color: #fff;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.box-imgabout img {
+    border-radius: 10%;
+}
+
+
+.hobbiesbox {
+
+    display: flex;
+     flex-flow: column;
+      
+     
+      
+      margin: 40px 20px;
+      padding: 20px;
+
+}
+
+
+.box-title2 {
+    text-align: right;
+
+  font: 100 33px/1.2 'Brush Script MT', cursive;
+color: rgb(69,156,152);
+
+padding-top: 10px;
+margin-top: -19px;
+letter-spacing: 3px;
+  
+ 
+}
+
+.hobbiesbox a ul li  {
+    color: #459c98;
+}
+
+.professionaltitle {
+    text-align: center;
+
+    font: 100 33px/1.2 'Brush Script MT', cursive;
+  color: rgb(69,156,152);
+  
+  padding-top: 10px;
+  margin-top: -19px;
+  margin-bottom: 18px;
+  letter-spacing: 3px;
+
+}
+
+
+.contactbox {
+    display: flex;
+    justify-content:space-evenly;
+    
+     
+     
+      background-color: #459c98;
+      
+      margin: 40px 20px;
+      padding: 20px;
+
+}
+
+
+.getintouchtitle {
+    font: 100 33px/1.2 'Brush Script MT', cursive;
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 3px 3px rgb(102, 101, 101);
+
+}
+
+
+.contacttitle {
+    font: 100 33px/1.2 'Brush Script MT', cursive;
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 3px 3px rgb(102, 101, 101);
+
+}
+
+.contactbox1 {
+    display: flex;
+    flex-flow: column;
+    
+}
+
+
+.academic-experiencetitle {
+    font: 100 33px/1.2 'Brush Script MT', cursive;
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 3px 3px rgb(102, 101, 101);
+  text-align: center;
+
+}
+
+footer {
+    background-color: #459c98;
+    text-align: center;
+    padding: 7px;
+    color: #fff;
+
+
+  
+
+   
+   
+    
+
+}
+
+.learn {
+    color:rgb(255, 255, 255) ;
+    text-align: center;
+
+    
+}
+
+
+.flex3 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row;
+   
+    margin: 40px 20px;
+    padding: 40px;
+}
+
+
+
+@media screen and (max-width:600px) {
+.flex3 {
+    display: block;}
+    .contactbox  {
+        display: block;}
+
+
+}
+
+
+.flex3 h3 {
+ 
+
+    font: 100 33px/1.2 'Brush Script MT', cursive;
+  color: rgb(69,156,152);
+}
+
+.flex3 ul li {
+   color: #459c98;
+}
+
+.up {
+    position: fixed;
+    right: 0;
+    z-index: 10;
+    top: 508px;
+    background-color:#459c98 ;
+    color: #fff;
+    font-size: large;
+    padding: 5px;
+    border-color: #fff;
+    border-style: groove;
+    border-radius: 5px;
+}
+
+.up a {
+    text-decoration: none;
+    color: #fff;
+    
+
+}
+
+
+.section-week2 {
+  
+    
+    min-height: 100vh;
+
+
+    margin: 20px 20px;
+    
+    
+
+   
+}
+
+
+/*
+
+.chat-box {
+  
+    background-color: #459c98;
+ justify-content: center;
+
+}
+
+.chat-box img {
+    height: 100px;
+  
+}
+
+.chat1 { width: 700px;
+
+    display: flex;
+    justify-content: center;
+background-color: white;
+margin:  40px;
+
+padding: 30px;
+
+
+
+*/
+
+
+
+.box {
+   
+    width: auto;
+    height: auto;
+    margin-bottom:70px;
+   margin-right: auto;
+   margin-left: auto;
+    display:flex;
+    
+    
+}
+
+.main-box {
+    margin-top: 30px;
+    
+
+}
+
+
+.text {
+   
+        background-color: #459c98;
+    
+        border-radius: 10px;
+        color: #fff;
+        font-size: small;
+        
+        margin-right: 15px;
+        padding: 15px;
+        
+}
+
+
+
+.arrow-right {
+    width: 0; 
+    height: 0; 
+    margin-left: -16px;
+    margin-top: 22px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 20px solid #459c98;
+  }
+
+.text2 {
+   
+    background-color: #459c98;
+
+    border-radius: 10px;
+    color: #fff;
+    font-size: small;
+    
+    margin-left: 15px;
+    padding: 15px;
+    
+}
+
+
+
+.imgbox {
+    margin-left: 15px;
+   
+object-fit: cover;   
+}
+
+.imgbox2 {
+    margin-right: 15px;
+   
+object-fit: cover;   
+}
+
+.imgbox img {
+    width: 70px;
+    border-radius: 50%;
+    border-style: dotted;
+    
+}
+
+.imgbox2 img {
+    width: 70px;
+    border-radius: 50%;
+    border-style: dotted;
+    
+}
+
+
+
+.box-3 {
+    display: flex;
+    flex-flow: column;
+}
+
+
+.arrow-left {
+    width: 0;
+    height: 0;
+    margin-top: 19px;
+    margin-right: -18px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 20px solid #459c98;
+  }
+
+  .trans {
+      
+    
+    display: none;
+       
+     
+  }
+  
+
+  .box:hover  .trans {
+   
+   
+display: block;
+   
+   background-color: #fff;
+    color: #459c98;
+    transform: translateY(10px);
+    
+    text-align: center;
+   
+    
+    
+   
+    transition: transform 0.2s, opacity 0.1s;
+   
+
+  }
+
+
+
+  #addbutton {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 3px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  #show {
+    background-color: #f4e136; /* Red */
+    border: none;
+    color: white;
+    padding: 3px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+
+
+ .marked {
+     color: #f44336;
+     text-decoration:line-through;
+ }
+
+ .unmarked {
+     color: black;
+    
+ }
+
+
+ .noncomplete {
+     display: none;
+ }
+
+
+     
+
+ .clear {
+     display: none;
+ }
+
+
+ .explain {
+     display: block; 
+     width: fit-content;
+     background-color: #f4e136;
+     margin-bottom: 20px;
+
+
+ }
+
+
+#showPictures {
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: space-around;
+    
+}
+#showPictures img {
+    width: 300px;
+}
+
+.searchbox1 {
+   text-align: center;
+    margin-bottom: 25px;
+}
