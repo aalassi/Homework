@@ -2,10 +2,65 @@
 
 const reservationForm = document.getElementById("my-reservation-form")
 
-reservationForm.addEventListener("submit", handleFormSubmit);
 
+reservationForm.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    const formData = new FormData(this)
+
+
+    fetch('https://striveschool-api.herokuapp.com/api/reservation/', {
+        method: 'post',
+        body: formData
+    }).then(function (respone) {
+        return respone.text();
+    }).then(function(text) {
+        console.log(text)
+    })
+});
+
+
+
+
+
+
+
+
+
+// let postButton = document.getElementById("submitButton")
+
+// postButton.addEventListener("submit", async (event) => {
+//     console.log("click")
+    
+//         let newBooking = {
+//             name: document.getElementById("name").value,
+//             phone: document.getElementById("phone").value,
+//             nnumberOfPersons: document.getElementById("numberOfPersons").value,
+//             smoking:document.getElementById("smoking").value,
+//             datetime: document.getElementById("dateTime").value,
+//             specialReq : document.getElementById("specialRequests").value
+//       }
+
+//     let response = await fetch(
+//         'https://striveschool-api.herokuapp.com/api/reservation/', {
+//             method: "POST",
+//             headers: {
+//                 "Content-Type": "application/json"
+//             },
+//             body: JSON.stringify(
+//                 newBooking) // the object newEvent needs to be sent as a string
+//         })
+// })
+
+
+
+ 
+
+
+/*
 async function handleFormSubmit(event) {
-    event.preventDefault();
+    
     const form = event.currentTarget;
     const url = form.action;
     try {
