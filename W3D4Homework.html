@@ -32,10 +32,23 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
   .aboutme {
       background-color: black;
       color: #fff;
-      
-      
-      
   }
+      
+
+  .backOffice {
+    text-align: center;
+
+    background-color: black;
+      color: #fff;
+      font-size: 30px;
+  }
+
+  #ReservationsHere {
+    font-size: 60px;
+    text-align: center;
+  }  
+
+  
   .footer {
       text-align: center;
   }
@@ -84,8 +97,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 <div class="w3-top w3-bar w3-xlarge w3-black w3-opacity-min">
 <a href="#home" class="w3-bar-item w3-button">HOME</a>
 <a href="#menu" class="w3-bar-item w3-button">MENU</a>
-<a href="#reservation-form" class="w3-bar-item w3-button">Reservation Form</a>
-<a href="#aboutme" class="w3-bar-item w3-button">About me</a>
+<a href="#reservation-form" class="w3-bar-item w3-button">Book now</a>
+<a href="#backOffice" class="w3-bar-item w3-button">back office</a>
+<a href="#aboutme" class="w3-bar-item w3-button">About</a>
 
 </div>
   
@@ -158,26 +172,26 @@ class="w3-display-container w3-grayscale-min">
                 <h2 class="title white-text">Book Your Table</h2>
 
                     <label for="name">Name:</label>
-                    <input class="input" type="text" placeholder="Name" id="name" required="true">
+                    <input class="input" type="text" placeholder="Name" id="name" required>
 
                     <label for="phone">Phone:</label>
-                    <input class="input" type="tel" placeholder="Phone" id="phone" required="true">
+                    <input class="input" type="tel" placeholder="Phone" id="phone" required>
 
                     <label for="numberOfPersons">Number of Guests:</label>
                    <input class="input" type="number" id="numberOfPersons">
 <br>
                     <label for="smoking">Smoking?</label>
-                    <input type="radio" name="smoking" id="smoking" value="true" >yes</input >
-                    <input type="radio" name="smoking" id="smoking" value="false" >no</input>
+                    <input type="checkbox" id="smoking" placeholder="smoking" >
+                   
 
 <br>
 
                     <label for="dateTime">Date and Time</label>
-                    <input class="input" type="date" placeholder="MM/DD/YYYY" id="date" required="true" id="dateTime">
-                    <input class="input" type="time" placeholder="HH:MM" id="time" required="true" id="dateTime">
+                    <input class="input" type="datetime-local" placeholder="date & time" id="dateTime" required >
+                    
 
-                  <label for="specialRequests">special requests</label>
-                  <input class="input" type="text" placeholder="enter your special requests" id="specialRequests">
+                  <label for="specialRequests">special request?</label>
+                  <input class="input" type="text" placeholder="type your special request" id="specialRequests">
 
                 <button type="submit" id="submitButton" class="main-button">Book Now</button>
 
@@ -191,6 +205,22 @@ class="w3-display-container w3-grayscale-min">
 
 <!--reservation ends here-->
 
+
+
+<!-- back office section starts -->
+<a name=backOffice></a><h1>Back Office/check reservations*Admin</h1>
+<section class="backOffice">
+ <button id="showReservations">Show Reservations</button>
+ <button id="deleteReservation">Delete Reservation by ID number</button>
+ <button id="getReservation">get Reservation by ID number</button>
+ <input id="idField" type="text" placeholder="enter id">
+
+<div id="ReservationsHere">
+
+</div>
+
+
+</section>
 
 <!-- about me -->
 <a name=aboutme></a> <h1>About me</h1>
@@ -226,3 +256,62 @@ class="w3-display-container w3-grayscale-min">
 
 
 <!--dumped mehtod="post" action="https://striveschool-api.herokuapp.com/api/reservation/" class="my-reservation-form"-->
+
+
+
+<!--  /*
+      
+       You are creating a presentation page for a restaurant.
+       The restaurant website will include a carousel with some pictures, a jumbotron with a catchy slogan and a reservation form.
+
+       In the reservation form, the user can select:
+
+       - Name
+       - Phone number
+       - Number of persons
+       - Smoking (true / false)
+       - Date and Time
+       - Special Requests
+
+        name: {
+            type: String,
+            required: true,
+        },
+        phone: {
+            type: String,
+            required: true
+        },
+        numberOfPersons: {
+            type: Number,
+            required: false
+        },
+        smoking: {
+            type: Boolean,
+            required: false
+        },
+        dateTime: {
+            type: Date,
+            required: true
+        },
+        specialRequests: {
+            type: String,
+            required: false
+        }
+
+       These reservation will be sent to the owner of the restaurant trough a REST API.
+
+       https://striveschool-api.herokuapp.com/api/reservation/
+
+       The API accepts JSON as content payload and provides the usual REST features:
+
+       - GET https://striveschool-api.herokuapp.com/api/reservation/ ==> Fetch all the reservations
+       - GET https://striveschool-api.herokuapp.com/api/reservation/{id} ==> Fetch a single reservation
+       - POST https://striveschool-api.herokuapp.com/api/reservation/ ==> Submit a new reservation
+       - PUT https://striveschool-api.herokuapp.com/api/reservation/{id} ==> Edit a single reservation
+       - DELETE https://striveschool-api.herokuapp.com/api/reservation/{id} ==> Delete a single reservation
+
+       [EXTRA]
+       Create a "back office" page where the restaurants' manager can edit / delete / check reservations.
+
+      */
+    -->
