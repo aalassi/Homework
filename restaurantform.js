@@ -101,6 +101,7 @@ showReservationsButton.addEventListener("click", async (retrieveReservations) =>
         "https://striveschool-api.herokuapp.com/api/reservation/",
 
     )
+    console.log(get)
 
     let allReservations = await get.json()
     let placeToShowReservations = document.getElementById("ReservationsHere")
@@ -167,13 +168,72 @@ getButton.addEventListener("click", async(event) =>{
             method: "GET"
         }
     )
+console.log(search)
 
-  
-    let placeToShowReservations = document.getElementById("ReservationsHere")
+let thisReservation =  await search.json()
+console.log(thisReservation)
 
-    placeToShowReservations.innerHTML = search
+let placeToShowReservations = document.getElementById("ReservationsHere")
+let singleReservation = 
+`<h2>${thisReservation.name}</h2>
+<h4>ID: ${thisReservation._id}</h4>
+<h4>Phone number: ${thisReservation.phone}</h4>
+<h4>number of persons: ${thisReservation.numberOfPersons}</h4>
+<h4>Smoking: ${thisReservation.smoking}</h4>
+<h4>date & time: ${thisReservation.dateTime}</h4>
+<h4>special requests: ${thisReservation.specialRequests}</h4>`
+   
 
-})
+    placeToShowReservations.innerHTML= singleReservation
+ 
+
+ })
+
+ // retrieve reservation by id ends 
+
+
+ // edit a reservation startrs 
+
+ let editButton = document.getElementById("editReservation")
+
+ 
+
+
+
+
+ editButton.addEventListener("click", async(event) =>{
+
+    const id = document.getElementById("idField").value
+
+    let newReservation2 = { 
+        name: document.getElementById("name2").value,
+        phone: document.getElementById("phone2").value,
+        numberOfPersons: document.getElementById("numberOfPersons2").value,
+        smoking: document.getElementById("smoking2").checked,
+        dateTime: document.getElementById("dateTime2").value,
+        specialRequests: document.getElementById("specialRequests2").value,}
+ 
+
+    let search = await fetch (
+        `https://striveschool-api.herokuapp.com/api/reservation/${id}`, {
+            method: "PUT",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(newReservation2),
+        }
+    )
+console.log(search)
+
+
+
+}
+ )
+
+
+
+
+
 
 
 
