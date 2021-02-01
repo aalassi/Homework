@@ -94,6 +94,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
   .aboutme img {
     border-radius: 75px;
   }
+
+  #smoking {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .control-me::after {
+    content: 		"🚭";
+    font-size: 100px;
+}
+#smoking:checked ~ .control-me::after {
+    content: 	"🚬";
+}
 </style>
 <body>
 <!-- Start Content -->
@@ -188,6 +201,7 @@ class="w3-display-container w3-grayscale-min">
 <br>
                     <label for="smoking">Smoking?</label>
                     <input type="checkbox" id="smoking" placeholder="smoking" >
+                    <div class="control-me"></div>
                    
 
 <br>
