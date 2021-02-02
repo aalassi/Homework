@@ -1,0 +1,165 @@
+.w3-content {
+    max-width: 100%; 
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.carousel-inner img {
+   width: 100%;
+   height: 100%;
+ }
+ .res-area {
+     background-color: black;
+     color: #fff;
+     padding: 35px;
+     
+ }
+ .aboutme {
+     background-color: black;
+     color: #fff;
+     padding: 20px;
+ }
+     
+
+ .backOffice {
+   text-align: center;
+
+   background-color: black;
+     color: #fff;
+     font-size: 30px;
+     padding: 35px;
+ }
+
+ #ReservationsHere {
+   font-size: 60px;
+   text-align: center;
+ }  
+
+ 
+ .footer {
+     text-align: center;
+ }
+ .social {
+     text-align: center;
+     display: grid;
+     
+ }
+ .social a {
+     font-size: 50px;
+ }
+
+ .wrapres {
+   font-size: 35px;
+   text-align: center;
+   
+ }
+ .my-reservation-form {
+   margin-left: auto;
+   margin-right: auto;
+   display: flex;
+   flex-direction: column;
+   align-content: center;
+   max-width: 400px;
+ }
+ .carousel {
+   font-size: 50px;
+   text-shadow: -4px 2px #c43636;
+   max-height: 100%;
+ }
+
+
+ .aboutme img {
+   border-radius: 75px;
+ }
+
+ #smoking {
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ .control-me::after {
+   content: 		"🚭";
+   font-size: 100px;
+}
+#smoking:checked ~ .control-me::after {
+   content: 	"🚬";
+}
+#smoking2:checked ~ .control-me::after {
+   content: 	"🚬";
+}
+.carousel-inner img {
+   width: 55%;
+   height: 55%;}
+
+#demo {
+ background-color: black;
+   text-align-last: center;
+}
+
+
+.colorButton {
+ position: relative;
+ background-color: #9c0d0d;
+ border: none;
+ border-radius: 5%;
+ font-size: 35px;
+ color: #FFFFFF;
+ padding: 4px;
+ text-align: center;
+ transition-duration: 0.4s;
+ overflow: hidden;
+ cursor: pointer;
+ margin: 15px;
+}
+
+.colorButton:after {
+ content: "";
+ background: #f1f1f1;
+ display: block;
+ position: absolute;
+ padding-top: 300%;
+ padding-left: 350%;
+ margin-left: -20px !important;
+ margin-top: -120%;
+ opacity: 0;
+ transition: all 0.8s
+}
+
+.colorButton:hover {
+ box-shadow: 0 0 10px 10px rgb(255 50 50 / 50%);
+}
+
+.colorButton:active:after {
+ padding: 0;
+ margin: 0;
+ opacity: 1;
+ transition: 0s
+}
+
+/* style hightlight begins */
+.active2{
+    color: #000;
+    background-color: #ccc; }
+/* style hightlight ends */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+ @media screen and (max-width: 768px){ 
+
+   .carousel-inner img {
+   width: 100%;
+   height: 100%; }
+
+   .my-reservation-form 
+ {
+   max-width: 300px;
+ }  
+ .carousel {
+   font-size: 30px;
+   text-shadow: -4px 2px #c43636;}
+ }
+
+
+

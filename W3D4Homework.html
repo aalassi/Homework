@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+  
+  <head>
 <meta charset="UTF-8">
 <title>Ahmad's Restaurant</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -14,173 +16,17 @@
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
- 
-    .w3-content {
-     max-width: 100%; 
-}
-body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
-.carousel-inner img {
-    width: 100%;
-    height: 100%;
-  }
-  .res-area {
-      background-color: black;
-      color: #fff;
-      padding: 35px;
-      
-  }
-  .aboutme {
-      background-color: black;
-      color: #fff;
-      padding: 20px;
-  }
-      
-
-  .backOffice {
-    text-align: center;
-
-    background-color: black;
-      color: #fff;
-      font-size: 30px;
-      padding: 35px;
-  }
-
-  #ReservationsHere {
-    font-size: 60px;
-    text-align: center;
-  }  
-
-  
-  .footer {
-      text-align: center;
-  }
-  .social {
-      text-align: center;
-      display: grid;
-      
-  }
-  .social a {
-      font-size: 50px;
-  }
-
-  .wrapres {
-    font-size: 35px;
-    text-align: center;
-    
-  }
-  .my-reservation-form {
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    max-width: 400px;
-  }
-  .carousel {
-    font-size: 50px;
-    text-shadow: -4px 2px #c43636;
-    max-height: 100%;
-  }
+<link rel="stylesheet" href="styleRest.css">
+</head>
 
 
-  .aboutme img {
-    border-radius: 75px;
-  }
-
-  #smoking {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .control-me::after {
-    content: 		"🚭";
-    font-size: 100px;
-}
-#smoking:checked ~ .control-me::after {
-    content: 	"🚬";
-}
-#smoking2:checked ~ .control-me::after {
-    content: 	"🚬";
-}
-.carousel-inner img {
-    width: 55%;
-    height: 55%;}
-
-#demo {
-  background-color: black;
-    text-align-last: center;
-}
-
-
-.colorButton {
-  position: relative;
-  background-color: #9c0d0d;
-  border: none;
-  border-radius: 5%;
-  font-size: 35px;
-  color: #FFFFFF;
-  padding: 4px;
-  text-align: center;
-  transition-duration: 0.4s;
-  overflow: hidden;
-  cursor: pointer;
-  margin: 15px;
-}
-
-.colorButton:after {
-  content: "";
-  background: #f1f1f1;
-  display: block;
-  position: absolute;
-  padding-top: 300%;
-  padding-left: 350%;
-  margin-left: -20px !important;
-  margin-top: -120%;
-  opacity: 0;
-  transition: all 0.8s
-}
-
-.colorButton:hover {
-  box-shadow: 0 12px 16px 0 rgba(241, 231, 87, 0.24),0 17px 50px 0 rgba(241, 232, 95, 0.19);
-}
-
-.colorButton:active:after {
-  padding: 0;
-  margin: 0;
-  opacity: 1;
-  transition: 0s
-}
-
-
-  @media screen and (max-width: 768px){ 
-
-    .carousel-inner img {
-    width: 100%;
-    height: 100%; }
-
-    .my-reservation-form 
-  {
-    max-width: 300px;
-  }  
-  .carousel {
-    font-size: 30px;
-    text-shadow: -4px 2px #c43636;}
-  }
-
-
-
-
-
-
-</style>
 <body>
 <!-- Start Content -->
-<div id="home" class="w3-content">
+<div id="wrapper" class="w3-content">
 
 <!-- Navbar (Sits on top) -->
 <div class="w3-top w3-bar w3-xlarge w3-black w3-opacity-min">
-<a href="#home" class="w3-bar-item w3-button">HOME</a>
+<a href="#home" class="w3-bar-item w3-button active2">HOME</a>
 <a href="#menu" class="w3-bar-item w3-button">MENU</a>
 <a href="#reservation-form" class="w3-bar-item w3-button">Book now</a>
 <a href="#backOffice" class="w3-bar-item w3-button">back office</a>
@@ -189,6 +35,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 </div>
   
 <!-- Header image -->
+<section id="home" class="myHomePage">
 <div style="height:800px;background-image:url('images/background3.jpg');background-size:cover"
 class="w3-display-container w3-grayscale-min">
 <div class="w3-display-bottomleft">
@@ -202,9 +49,11 @@ class="w3-display-container w3-grayscale-min">
 
 </div>
 </div>
+</section>
 
   <!-- slide photos starts here -->
-  <a name=menu></a>
+  <a ></a>
+  <section id="menu" class="myslideShow">
   <h1>Menu</h1>
   
   <div id="demo" class="carousel slide" data-ride="carousel">
@@ -243,13 +92,14 @@ class="w3-display-container w3-grayscale-min">
       <span class="carousel-control-next-icon"></span>
     </a>
   </div>
+</section>
 
 <!-- slide photos ends here -->
 
 
 <!--reservation starts here -->
-<a name=reservation-form></a> <h1>Reservation Form</h1>
-<section class=res-area>
+<a ></a> <h1>Reservation Form</h1>
+<section id="reservation-form" class=res-area>
 
     <div class="wrapres">
         <form class="my-reservation-form" id="my-reservation-form">
@@ -295,8 +145,8 @@ class="w3-display-container w3-grayscale-min">
 
 
 <!-- back office section starts -->
-<a name=backOffice></a><h1>Back Office/check reservations*Admin</h1>
-<section class="backOffice">
+<a ></a><h1>Back Office/check reservations*Admin</h1>
+<section id="backOffice" class="backOffice">
  <button class="colorButton" id="showReservations">Show Reservations</button>
  <button class="colorButton" id="deleteReservation">Delete Reservation by ID number</button>
  <button class="colorButton" id="getReservation">Search Reservation by ID number</button>
@@ -334,8 +184,8 @@ class="w3-display-container w3-grayscale-min">
 </section>
 
 <!-- about me -->
-<a name=aboutme></a> <h1>About me</h1>
-<section class=aboutme>
+<a ></a> <h1>About me</h1>
+<section id="aboutme" class=aboutme>
 
     <div class="social">
      
@@ -361,6 +211,9 @@ class="w3-display-container w3-grayscale-min">
 
 <!--script begins-->
 <script src="restaurantform.js"></script>
+
+
+
 </body>
 </html>
 
