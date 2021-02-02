@@ -143,8 +143,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 
 /* style hightlight begins */
 .active2{
-    color: #000;
-    background-color: #ccc; }
+    color: rgb(255, 255, 255);
+    background-color: rgb(168, 38, 38); }
 /* style hightlight ends */
 
 
