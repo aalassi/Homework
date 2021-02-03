@@ -39,12 +39,28 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
  }
  .social {
      text-align: center;
-     display: grid;
      
  }
  .social a {
      font-size: 50px;
  }
+
+  /* Add a hover effect if you want */
+  .fa:hover {
+   
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px 20px rgb(255 50 50 / 50%);
+    color: #ff0000;
+    text-decoration: none;
+  }
+
+  .gitHub:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px 20px rgb(255 50 50 / 50%);
+    color: #ff0000;
+    text-decoration: none;
+
+  }
 
  .wrapres {
    font-size: 35px;
