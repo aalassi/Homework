@@ -29,8 +29,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
  }
 
  #ReservationsHere {
-   font-size: 60px;
+   font-size: 40px;
    text-align: center;
+   background-color:#c43636 ;
+   margin-top: 10px;
  }  
 
  
@@ -44,6 +46,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
  .social a {
      font-size: 50px;
  }
+
+ #ConfirmationHere {
+   background-color:#c43636 ;
+   font-size: 30px;
+   text-align: center;
+ }
+
+ 
 
   /* Add a hover effect if you want */
   .fa:hover {

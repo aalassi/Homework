@@ -73,7 +73,14 @@ submitReservation.addEventListener("click", async (bookNow) => {
 
     }
     console.log(newReservation)
+    let confirmMsg = document.getElementById("ConfirmationHere")
 
+    if (newReservation.name=="" || newReservation.phone==""  || newReservation.dateTime=="") {
+      confirmMsg.innerHTML=("please enter name, phone, Date&time in order to book your reservation ")
+
+    }
+
+    else {
 
     let push = await fetch(
         "https://striveschool-api.herokuapp.com/api/reservation/",
@@ -86,8 +93,9 @@ submitReservation.addEventListener("click", async (bookNow) => {
         })
     
     console.log("new reservation pushed")
+    confirmMsg.innerHTML=("Thank you so much! Your reservation has been sent! Please give us a little time to get back to you for confirmation!")
 
-
+      }
 
     });
 
@@ -138,17 +146,26 @@ showReservationsButton.addEventListener("click", async (retrieveReservations) =>
 let deleteButton = document.getElementById("deleteReservation")
 
 deleteButton.addEventListener("click", async(event) =>{
-    const id = document.getElementById("idField").value
+
+ 
+    let id = document.getElementById("idField").value
+    let placeToShowReservations = document.getElementById("ReservationsHere")
+
+
+    if (id==""){
+      placeToShowReservations.innerHTML = "please enter a valid id"
+
+    }
+    else{
 
     let remove = await fetch (
         `https://striveschool-api.herokuapp.com/api/reservation/${id}`, {
             method: "DELETE"
         }
     )
-    let placeToShowReservations = document.getElementById("ReservationsHere")
 
     placeToShowReservations.innerHTML = `reservation ${id} has been deleted`
-   
+      }
     
 
 })
