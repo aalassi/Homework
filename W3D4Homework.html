@@ -22,8 +22,10 @@
 
 
 <body>
+
 <!-- Start Content -->
 <div id="wrapper" class="w3-content">
+
 
 <!-- Navbar (Sits on top) -->
 <div class="w3-top w3-bar w3-xlarge w3-black w3-opacity-min">
@@ -34,6 +36,7 @@
 <a href="#aboutme" class="w3-bar-item w3-button">About</a>
 
 </div>
+    
   
 <!-- Header image -->
 <section id="home" class="myHomePage">
@@ -99,18 +102,19 @@ class="w3-display-container w3-grayscale-min">
 
 
 <!--reservation starts here -->
+
 <a ></a> <h1>Reservation Form</h1>
 <section id="reservation-form" class=res-area>
 
     <div class="wrapres">
-        <form class="my-reservation-form" id="my-reservation-form">
+        <form action="#" onsubmit="myJsfunction(); return false;" class="my-reservation-form" id="my-reservation-form">
                 <h4 class="sub-title">Reservation</h4>
                 <h2 class="title white-text">Book Your Table</h2>
 
-                    <label for="name">Name:</label>
+                    <label for="name" class="required">Name:</label>
                     <input class="input" type="text" placeholder="Name" id="name" required>
 
-                    <label for="phone">Phone:</label>
+                    <label for="phone" class="required" >Phone:</label>
                     <input class="input" type="tel" placeholder="Phone" id="phone" required>
 
                     <label for="numberOfPersons">Number of Guests:</label>
@@ -123,7 +127,7 @@ class="w3-display-container w3-grayscale-min">
 
 <br>
 
-                    <label for="dateTime">Date and Time</label>
+                    <label for="dateTime" class="required">Date and Time</label>
                     <input class="input" type="datetime-local" placeholder="date & time" id="dateTime" required >
                     
 

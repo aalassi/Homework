@@ -54,12 +54,19 @@
 
       */
 
-
+        function myJsfunction() {
+        
+         return false;
+       
+       }
 
 //method 1 
 //create a new reservation (post)
 let submitReservation = document.getElementById("submitButton") 
+
 submitReservation.addEventListener("click", async (bookNow) => {
+
+ 
 
     
     let newReservation = { 
@@ -76,7 +83,7 @@ submitReservation.addEventListener("click", async (bookNow) => {
     let confirmMsg = document.getElementById("ConfirmationHere")
 
     if (newReservation.name=="" || newReservation.phone==""  || newReservation.dateTime=="") {
-      confirmMsg.innerHTML=("please enter name, phone, Date&time in order to book your reservation ")
+      confirmMsg.innerHTML=("<br><br><br>please enter name, phone, Date&time in order to book your reservation<br><br><br> ")
 
     }
 
@@ -93,8 +100,10 @@ submitReservation.addEventListener("click", async (bookNow) => {
         })
     
     console.log("new reservation pushed")
-    confirmMsg.innerHTML=("Thank you so much! Your reservation has been sent! Please give us a little time to get back to you for confirmation!")
-
+    confirmMsg.innerHTML=("<br><br><br>Thank you so much! Your reservation has been sent! Please give us a little time to get back to you for confirmation! <br><br><br>")
+    document.querySelector("#ConfirmationHere").scrollIntoView ({ 
+      behavior: 'smooth' 
+    }); 
       }
 
     });
@@ -129,8 +138,10 @@ showReservationsButton.addEventListener("click", async (retrieveReservations) =>
 
 
 
-    placeToShowReservations.innerHTML = "All reservations:" + convertAllReservationsArray
-
+    placeToShowReservations.innerHTML = "<br><br><br><br>All reservations:" + convertAllReservationsArray +"<br><br><br>"
+    document.querySelector("#ReservationsHere").scrollIntoView({ 
+      behavior: 'smooth' 
+    }); 
     
 
 
@@ -153,7 +164,7 @@ deleteButton.addEventListener("click", async(event) =>{
 
 
     if (id==""){
-      placeToShowReservations.innerHTML = "please enter a valid id"
+      placeToShowReservations.innerHTML = "<br><br><br>please enter a valid id<br><br><br>"
 
     }
     else{
@@ -164,7 +175,12 @@ deleteButton.addEventListener("click", async(event) =>{
         }
     )
 
-    placeToShowReservations.innerHTML = `reservation ${id} has been deleted`
+   
+
+    placeToShowReservations.innerHTML = `<br><br><br>reservation ${id} has been deleted<br><br><br>`
+    document.querySelector("#ReservationsHere").scrollIntoView({ 
+      behavior: 'smooth' 
+    }); 
       }
     
 
@@ -366,7 +382,6 @@ reservationForm.addEventListener("submit", async function(e) {
 
 mthods n2 ends 
 */ 
-
 
 
 
