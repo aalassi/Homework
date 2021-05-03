@@ -165,6 +165,9 @@ deleteButton.addEventListener("click", async(event) =>{
 
     if (id==""){
       placeToShowReservations.innerHTML = "<br><br><br>please enter a valid id<br><br><br>"
+      document.querySelector("#ReservationsHere").scrollIntoView({ 
+        behavior: 'smooth' 
+      }); 
 
     }
     else{
@@ -193,8 +196,13 @@ deleteButton.addEventListener("click", async(event) =>{
 
 let getButton = document.getElementById("getReservation")
 
+
+
+
 getButton.addEventListener("click", async(event) =>{
-    const id = document.getElementById("idField").value
+
+  let id = document.getElementById("idField").value
+   
 
     let search = await fetch (
         `https://striveschool-api.herokuapp.com/api/reservation/${id}`, {
@@ -203,8 +211,12 @@ getButton.addEventListener("click", async(event) =>{
     )
 console.log(search)
 
+
+
 let thisReservation =  await search.json()
 console.log(thisReservation)
+
+
 
 let placeToShowReservations = document.getElementById("ReservationsHere")
 let singleReservation = 
@@ -215,12 +227,23 @@ let singleReservation =
 <h4>Smoking: ${thisReservation.smoking}</h4>
 <h4>date & time: ${thisReservation.dateTime}</h4>
 <h4>special requests: ${thisReservation.specialRequests}</h4>`
-   
 
-    placeToShowReservations.innerHTML= singleReservation
+
+   
+        if (id=="") { placeToShowReservations.innerHTML = "<br><br><br>please enter a valid id<br><br><br>"
+        document.querySelector("#ReservationsHere").scrollIntoView({ 
+          behavior: 'smooth' 
+        }); }
+        else {
+    placeToShowReservations.innerHTML= "<br><br>" + singleReservation + "<br><br>" 
+    document.querySelector("#ReservationsHere").scrollIntoView({ 
+      behavior: 'smooth' 
+    });
+  }
  
 
- })
+
+})
 
  // retrieve reservation by id ends 
 
@@ -236,7 +259,16 @@ let singleReservation =
 
  editButton.addEventListener("click", async(event) =>{
 
-    const id = document.getElementById("idField").value
+    let id = document.getElementById("idField").value
+    let placeToShowReservations = document.getElementById("ReservationsHere")
+
+
+    if (id=="") { placeToShowReservations.innerHTML = "<br><br><br>please enter a valid id<br><br><br>"
+document.querySelector("#ReservationsHere").scrollIntoView({ 
+  behavior: 'smooth' 
+});   }
+
+else {
 
     let newReservation2 = { 
         name: document.getElementById("name2").value,
@@ -257,6 +289,13 @@ let singleReservation =
         }
     )
 console.log(search)
+
+    
+  placeToShowReservations.innerHTML= `<br><br> reservation  ${id} has been edited `
+document.querySelector("#ReservationsHere").scrollIntoView({ 
+  behavior: 'smooth' 
+});
+}
 
 
 
